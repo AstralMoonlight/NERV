@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  nerv-app:
+    # Imagen vinculada a tu repositorio en GitHub Container Registry
+    image: ghcr.io/astralmoonlight/nerv:latest
+    container_name: nerv-app
+    restart: always
+    # Conectamos la carpeta local con la del contenedor para no perder los informes
+    volumes:
+      - ./data:/app/data
+    environment:
+      - TZ=America/Santiago # Sincronizado con el horario de Concepción
