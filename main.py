@@ -1,6 +1,8 @@
 import os
 import datetime
 import logging
+import time
+import json
 from typing import List, Dict
 
 import CONFIG
@@ -90,8 +92,8 @@ def generate_markdown_report(results: List[Dict], report_path: str):
         logging.error(f"Error al generar el informe: {e}")
 
 
-def generate_signals_report(results: List[Dict], report_path: str):
-    """Generates a concise report with only today's BUY/SELL signals."""
+def generate_signals_report(results: List[Dict], report_path: str) -> List[Dict]:
+    """Generates a concise report with only today's BUY/SELL signals and returns them."""
     try:
         os.makedirs(os.path.dirname(report_path), exist_ok=True)
         
@@ -103,7 +105,7 @@ def generate_signals_report(results: List[Dict], report_path: str):
         
         if not last_dates:
             logging.warning("No hay historial operativo para generar señales.")
-            return
+            return []
 
         reference_date = max(last_dates)
         signals = []
@@ -117,7 +119,8 @@ def generate_signals_report(results: List[Dict], report_path: str):
                         'Ticker': res['Ticker'],
                         'Acción': last_event['action'],
                         'Precio': last_event['price'],
-                        'Motivo': last_event['reason']
+                        'Motivo': last_event['reason'],
+                        'Fecha': last_event['date']
                     })
 
         with open(report_path, "w") as f:
@@ -136,52 +139,95 @@ def generate_signals_report(results: List[Dict], report_path: str):
             f.write("\n\n*Nota: Estas señales corresponden al estado más reciente detectado en el backtest.*")
             
         logging.info(f"Reporte de señales generado exitosamente en {report_path}")
+        return signals
 
     except Exception as e:
         logging.error(f"Error generando reporte de señales: {e}")
+        return []
+
+def append_signals_to_json(signals: List[Dict], log_path: str):
+    """Appends current signals to a historical JSON log file."""
+    if not signals:
+        return
+        
+    try:
+        history = []
+        if os.path.exists(log_path):
+            with open(log_path, 'r') as f:
+                try:
+                    history = json.load(f)
+                except json.JSONDecodeError:
+                    history = []
+        
+        # Agregar nuevas señales con timestamp de procesamiento
+        now_str = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        for s in signals:
+            entry = s.copy()
+            entry['processed_at'] = now_str
+            # Evitar duplicados exactos si el cron corre varias veces el mismo día
+            if not any(h['Ticker'] == entry['Ticker'] and h['Fecha'] == entry['Fecha'] and h['Acción'] == entry['Acción'] for h in history):
+                history.append(entry)
+            
+        # Mantener solo las últimas 1000 entradas
+        history = history[-1000:]
+        
+        with open(log_path, 'w') as f:
+            json.dump(history, f, indent=4)
+            
+        logging.info(f"Señales históricas guardadas en {log_path}")
+    except Exception as e:
+        logging.error(f"Error guardando señales en JSON: {e}")
 
 
 def main():
-    logging.info("Iniciando análisis y backtesting del Proyecto NERV...")
-    
-    results = []
-    
-    for ticker in CONFIG.TICKERS:
-        df = load_data(ticker, period="3y", interval="1d")
+    while True:
+        logging.info("--- Iniciando ciclo de escaneo NERV ---")
         
-        if df.empty:
-            logging.warning(f"Omitiendo {ticker} por falta de datos.")
-            continue
+        results = []
+        
+        for ticker in CONFIG.TICKERS:
+            df = load_data(ticker, period="3y", interval="1d")
             
-        # 1. Agregar Indicadores (RSI y SMAs)
-        df = apply_indicators(df)
+            if df.empty:
+                logging.warning(f"Omitiendo {ticker} por falta de datos.")
+                continue
+                
+            # 1. Agregar Indicadores (RSI y SMAs)
+            df = apply_indicators(df)
+            
+            # 2. Correr Backtest sobre los históricos
+            try:
+                 resultado_ticker = run_backtest(df, ticker)
+                 if resultado_ticker:
+                      results.append(resultado_ticker)
+            except Exception as e:
+                 logging.error(f"Error procesando backtest para {ticker}: {e}")
         
-        # 2. Correr Backtest sobre los históricos
-        try:
-             resultado_ticker = run_backtest(df, ticker)
-             if resultado_ticker:
-                  results.append(resultado_ticker)
-        except Exception as e:
-             logging.error(f"Error procesando backtest para {ticker}: {e}")
-    
-    if results:
-        # Generar nombres con fecha para el historial
-        today_str = datetime.datetime.now().strftime('%Y-%m-%d')
-        
-        # Informe de Backtest con fecha
-        base_report, ext_report = os.path.splitext(CONFIG.REPORT_PATH)
-        dated_report_path = f"{base_report}_{today_str}{ext_report}"
-        generate_markdown_report(results, dated_report_path)
-        
-        # Informe de Señales con fecha
-        base_signal, ext_signal = os.path.splitext(CONFIG.SIGNAL_REPORT_PATH)
-        dated_signal_path = f"{base_signal}_{today_str}{ext_signal}"
-        generate_signals_report(results, dated_signal_path)
-        
-        logging.info("Simulación y reporteo terminados exitosamente.")
-        logging.info(f"Reportes guardados: {os.path.basename(dated_report_path)} y {os.path.basename(dated_signal_path)}")
-    else:
-        logging.warning("No se generaron resultados de backtest.")
+        if results:
+            # Generar nombres con fecha para el historial
+            today_str = datetime.datetime.now().strftime('%Y-%m-%d')
+            
+            # Informe de Backtest con fecha (Auditoría visual)
+            base_report, ext_report = os.path.splitext(CONFIG.REPORT_PATH)
+            dated_report_path = f"{base_report}_{today_str}{ext_report}"
+            generate_markdown_report(results, dated_report_path)
+            
+            # Informe de Señales con fecha (Acción diaria)
+            base_signal, ext_signal = os.path.splitext(CONFIG.SIGNAL_REPORT_PATH)
+            dated_signal_path = f"{base_signal}_{today_str}{ext_signal}"
+            signals_today = generate_signals_report(results, dated_signal_path)
+            
+            # Log Histórico JSON (Para integración Web)
+            append_signals_to_json(signals_today, CONFIG.SIGNALS_JSON_LOG)
+            
+            logging.info("Simulación y reporteo terminados exitosamente.")
+            logging.info(f"Reportes guardados: {os.path.basename(dated_report_path)} y {os.path.basename(dated_signal_path)}")
+        else:
+            logging.warning("No se generaron resultados de backtest.")
+
+        # EL ESCUDO ANTI-BANEO (Sentinel Mode)
+        logging.info("Modo centinela activado. Próximo escaneo en 1 hora...")
+        time.sleep(3600)
 
 if __name__ == "__main__":
     main()

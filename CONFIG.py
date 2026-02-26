@@ -48,3 +48,6 @@ CACHE_DIR = "./data/cache"
 
 # Ruta para el reporte de señales diarias
 SIGNAL_REPORT_PATH = "./data/senales_nerv_hoy.md"
+
+# Log histórico de señales en formato JSON (para integración web)
+SIGNALS_JSON_LOG = "./data/nerv_signals_log.json"
