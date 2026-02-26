@@ -1,0 +1,206 @@
+2026-02-26 00:25:34,240 - INFO - Iniciando análisis y backtesting del Proyecto NERV...
+2026-02-26 00:25:34,244 - INFO - Cargados datos locales para AAPL (502 filas).
+2026-02-26 00:25:34,245 - INFO - Datos de AAPL ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:34,524 - INFO - Cargados datos locales para ABBV (502 filas).
+2026-02-26 00:25:34,525 - INFO - Datos de ABBV ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:34,603 - INFO - Cargados datos locales para ABNB (502 filas).
+2026-02-26 00:25:34,603 - INFO - Datos de ABNB ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:34,669 - INFO - Cargados datos locales para AMAT (502 filas).
+2026-02-26 00:25:34,670 - INFO - Datos de AMAT ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:34,736 - INFO - Cargados datos locales para AMD (502 filas).
+2026-02-26 00:25:34,736 - INFO - Datos de AMD ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:34,798 - INFO - Cargados datos locales para AMGN (502 filas).
+2026-02-26 00:25:34,799 - INFO - Datos de AMGN ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:34,865 - INFO - Cargados datos locales para AMZN (502 filas).
+2026-02-26 00:25:34,866 - INFO - Datos de AMZN ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:34,936 - INFO - Cargados datos locales para APP (501 filas).
+2026-02-26 00:25:34,936 - INFO - Datos de APP ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,008 - INFO - Cargados datos locales para ARKK (502 filas).
+2026-02-26 00:25:35,008 - INFO - Datos de ARKK ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,074 - INFO - Cargados datos locales para ARM (502 filas).
+2026-02-26 00:25:35,074 - INFO - Datos de ARM ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,140 - INFO - Cargados datos locales para AVGO (502 filas).
+2026-02-26 00:25:35,141 - INFO - Datos de AVGO ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,204 - INFO - Cargados datos locales para AXP (502 filas).
+2026-02-26 00:25:35,204 - INFO - Datos de AXP ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,272 - INFO - Cargados datos locales para BABA (502 filas).
+2026-02-26 00:25:35,272 - INFO - Datos de BABA ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,338 - INFO - Cargados datos locales para BAC (502 filas).
+2026-02-26 00:25:35,339 - INFO - Datos de BAC ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,407 - INFO - Cargados datos locales para BCH (502 filas).
+2026-02-26 00:25:35,407 - INFO - Datos de BCH ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,476 - INFO - Cargados datos locales para BIDU (502 filas).
+2026-02-26 00:25:35,477 - INFO - Datos de BIDU ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,543 - INFO - Cargados datos locales para BRK-B (502 filas).
+2026-02-26 00:25:35,543 - INFO - Datos de BRK-B ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,608 - INFO - Cargados datos locales para BSAC (502 filas).
+2026-02-26 00:25:35,608 - INFO - Datos de BSAC ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,683 - INFO - Cargados datos locales para CAT (502 filas).
+2026-02-26 00:25:35,683 - INFO - Datos de CAT ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,747 - INFO - Cargados datos locales para CCU (502 filas).
+2026-02-26 00:25:35,747 - INFO - Datos de CCU ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,814 - INFO - Cargados datos locales para CEG (501 filas).
+2026-02-26 00:25:35,814 - INFO - Datos de CEG ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,880 - INFO - Cargados datos locales para COP (502 filas).
+2026-02-26 00:25:35,881 - INFO - Datos de COP ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:35,949 - INFO - Cargados datos locales para COST (502 filas).
+2026-02-26 00:25:35,950 - INFO - Datos de COST ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,015 - INFO - Cargados datos locales para CPER (502 filas).
+2026-02-26 00:25:36,015 - INFO - Datos de CPER ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,078 - INFO - Cargados datos locales para CRM (502 filas).
+2026-02-26 00:25:36,078 - INFO - Datos de CRM ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,143 - INFO - Cargados datos locales para CRWD (502 filas).
+2026-02-26 00:25:36,144 - INFO - Datos de CRWD ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,208 - INFO - Cargados datos locales para CVX (502 filas).
+2026-02-26 00:25:36,208 - INFO - Datos de CVX ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,270 - INFO - Cargados datos locales para DE (502 filas).
+2026-02-26 00:25:36,270 - INFO - Datos de DE ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,338 - INFO - Cargados datos locales para DIA (502 filas).
+2026-02-26 00:25:36,338 - INFO - Datos de DIA ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,402 - INFO - Cargados datos locales para DLO (502 filas).
+2026-02-26 00:25:36,402 - INFO - Datos de DLO ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,472 - INFO - Cargados datos locales para ENIC (502 filas).
+2026-02-26 00:25:36,472 - INFO - Datos de ENIC ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,535 - INFO - Cargados datos locales para FTNT (502 filas).
+2026-02-26 00:25:36,536 - INFO - Datos de FTNT ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,602 - INFO - Cargados datos locales para GE (502 filas).
+2026-02-26 00:25:36,602 - INFO - Datos de GE ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,666 - INFO - Cargados datos locales para GILD (502 filas).
+2026-02-26 00:25:36,666 - INFO - Datos de GILD ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,729 - INFO - Cargados datos locales para GLD (502 filas).
+2026-02-26 00:25:36,730 - INFO - Datos de GLD ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,795 - INFO - Cargados datos locales para GOOGL (502 filas).
+2026-02-26 00:25:36,795 - INFO - Datos de GOOGL ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,859 - INFO - Cargados datos locales para GRAB (502 filas).
+2026-02-26 00:25:36,860 - INFO - Datos de GRAB ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:36,926 - INFO - Cargados datos locales para GS (502 filas).
+2026-02-26 00:25:36,927 - INFO - Datos de GS ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,005 - INFO - Cargados datos locales para HD (502 filas).
+2026-02-26 00:25:37,005 - INFO - Datos de HD ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,072 - INFO - Cargados datos locales para IBIT (501 filas).
+2026-02-26 00:25:37,073 - INFO - Datos de IBIT ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,136 - INFO - Cargados datos locales para ISRG (502 filas).
+2026-02-26 00:25:37,136 - INFO - Datos de ISRG ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,199 - INFO - Cargados datos locales para IWM (502 filas).
+2026-02-26 00:25:37,200 - INFO - Datos de IWM ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,268 - INFO - Cargados datos locales para JNJ (502 filas).
+2026-02-26 00:25:37,269 - INFO - Datos de JNJ ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,346 - INFO - Cargados datos locales para JPM (502 filas).
+2026-02-26 00:25:37,346 - INFO - Datos de JPM ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,418 - INFO - Cargados datos locales para KO (502 filas).
+2026-02-26 00:25:37,418 - INFO - Datos de KO ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,493 - INFO - Cargados datos locales para LIT (502 filas).
+2026-02-26 00:25:37,493 - INFO - Datos de LIT ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,560 - INFO - Cargados datos locales para LLY (502 filas).
+2026-02-26 00:25:37,561 - INFO - Datos de LLY ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,625 - INFO - Cargados datos locales para LMT (502 filas).
+2026-02-26 00:25:37,625 - INFO - Datos de LMT ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,686 - INFO - Cargados datos locales para LOW (502 filas).
+2026-02-26 00:25:37,686 - INFO - Datos de LOW ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,760 - INFO - Cargados datos locales para LTM (398 filas).
+2026-02-26 00:25:37,760 - INFO - Datos de LTM ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,825 - INFO - Cargados datos locales para LULU (502 filas).
+2026-02-26 00:25:37,826 - INFO - Datos de LULU ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,902 - INFO - Cargados datos locales para MA (502 filas).
+2026-02-26 00:25:37,902 - INFO - Datos de MA ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:37,974 - INFO - Cargados datos locales para MCD (502 filas).
+2026-02-26 00:25:37,974 - INFO - Datos de MCD ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,035 - INFO - Cargados datos locales para MELI (502 filas).
+2026-02-26 00:25:38,036 - INFO - Datos de MELI ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,105 - INFO - Cargados datos locales para META (502 filas).
+2026-02-26 00:25:38,105 - INFO - Datos de META ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,172 - INFO - Cargados datos locales para MRK (502 filas).
+2026-02-26 00:25:38,172 - INFO - Datos de MRK ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,235 - INFO - Cargados datos locales para MS (502 filas).
+2026-02-26 00:25:38,235 - INFO - Datos de MS ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,302 - INFO - Cargados datos locales para MSFT (502 filas).
+2026-02-26 00:25:38,302 - INFO - Datos de MSFT ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,365 - INFO - Cargados datos locales para MU (502 filas).
+2026-02-26 00:25:38,365 - INFO - Datos de MU ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,432 - INFO - Cargados datos locales para NEE (502 filas).
+2026-02-26 00:25:38,432 - INFO - Datos de NEE ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,499 - INFO - Cargados datos locales para NFLX (502 filas).
+2026-02-26 00:25:38,500 - INFO - Datos de NFLX ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,563 - INFO - Cargados datos locales para NOW (502 filas).
+2026-02-26 00:25:38,563 - INFO - Datos de NOW ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,627 - INFO - Cargados datos locales para NU (502 filas).
+2026-02-26 00:25:38,628 - INFO - Datos de NU ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,694 - INFO - Cargados datos locales para NVDA (502 filas).
+2026-02-26 00:25:38,694 - INFO - Datos de NVDA ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,756 - INFO - Cargados datos locales para NVO (502 filas).
+2026-02-26 00:25:38,756 - INFO - Datos de NVO ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,819 - INFO - Cargados datos locales para ORCL (502 filas).
+2026-02-26 00:25:38,819 - INFO - Datos de ORCL ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,882 - INFO - Cargados datos locales para PANW (502 filas).
+2026-02-26 00:25:38,882 - INFO - Datos de PANW ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:38,947 - INFO - Cargados datos locales para PEP (502 filas).
+2026-02-26 00:25:38,948 - INFO - Datos de PEP ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,013 - INFO - Cargados datos locales para PG (502 filas).
+2026-02-26 00:25:39,013 - INFO - Datos de PG ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,073 - INFO - Cargados datos locales para PLTR (502 filas).
+2026-02-26 00:25:39,074 - INFO - Datos de PLTR ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,134 - INFO - Cargados datos locales para QCOM (502 filas).
+2026-02-26 00:25:39,134 - INFO - Datos de QCOM ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,196 - INFO - Cargados datos locales para QQQ (502 filas).
+2026-02-26 00:25:39,196 - INFO - Datos de QQQ ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,257 - INFO - Cargados datos locales para RTX (502 filas).
+2026-02-26 00:25:39,257 - INFO - Datos de RTX ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,327 - INFO - Cargados datos locales para SBUX (502 filas).
+2026-02-26 00:25:39,328 - INFO - Datos de SBUX ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,392 - INFO - Cargados datos locales para SE (502 filas).
+2026-02-26 00:25:39,392 - INFO - Datos de SE ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,460 - INFO - Cargados datos locales para SHEL (502 filas).
+2026-02-26 00:25:39,460 - INFO - Datos de SHEL ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,523 - INFO - Cargados datos locales para SHOP (502 filas).
+2026-02-26 00:25:39,523 - INFO - Datos de SHOP ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,585 - INFO - Cargados datos locales para SLV (502 filas).
+2026-02-26 00:25:39,585 - INFO - Datos de SLV ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,651 - INFO - Cargados datos locales para SMH (502 filas).
+2026-02-26 00:25:39,652 - INFO - Datos de SMH ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,716 - INFO - Cargados datos locales para SNOW (502 filas).
+2026-02-26 00:25:39,716 - INFO - Datos de SNOW ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,778 - INFO - Cargados datos locales para SPOT (501 filas).
+2026-02-26 00:25:39,778 - INFO - Datos de SPOT ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,839 - INFO - Cargados datos locales para SPY (502 filas).
+2026-02-26 00:25:39,839 - INFO - Datos de SPY ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,902 - INFO - Cargados datos locales para SQM (502 filas).
+2026-02-26 00:25:39,902 - INFO - Datos de SQM ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:39,972 - INFO - Cargados datos locales para STNE (502 filas).
+2026-02-26 00:25:39,972 - INFO - Datos de STNE ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:40,034 - INFO - Cargados datos locales para TGT (502 filas).
+2026-02-26 00:25:40,034 - INFO - Datos de TGT ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:40,095 - INFO - Cargados datos locales para TLT (502 filas).
+2026-02-26 00:25:40,095 - INFO - Datos de TLT ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:40,159 - INFO - Cargados datos locales para TMO (502 filas).
+2026-02-26 00:25:40,159 - INFO - Datos de TMO ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:40,219 - INFO - Cargados datos locales para TSLA (502 filas).
+2026-02-26 00:25:40,219 - INFO - Datos de TSLA ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:40,281 - INFO - Cargados datos locales para TSM (502 filas).
+2026-02-26 00:25:40,281 - INFO - Datos de TSM ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:40,351 - INFO - Cargados datos locales para TXN (502 filas).
+2026-02-26 00:25:40,351 - INFO - Datos de TXN ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:40,423 - INFO - Cargados datos locales para UBER (502 filas).
+2026-02-26 00:25:40,423 - INFO - Datos de UBER ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:40,496 - INFO - Cargados datos locales para UNH (502 filas).
+2026-02-26 00:25:40,496 - INFO - Datos de UNH ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:40,568 - INFO - Cargados datos locales para URA (502 filas).
+2026-02-26 00:25:40,569 - INFO - Datos de URA ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:40,649 - INFO - Cargados datos locales para USO (502 filas).
+2026-02-26 00:25:40,650 - INFO - Datos de USO ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:40,727 - INFO - Cargados datos locales para V (502 filas).
+2026-02-26 00:25:40,727 - INFO - Datos de V ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:40,796 - INFO - Cargados datos locales para VRT (501 filas).
+2026-02-26 00:25:40,796 - INFO - Datos de VRT ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:40,862 - INFO - Cargados datos locales para VRTX (502 filas).
+2026-02-26 00:25:40,862 - INFO - Datos de VRTX ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:40,928 - INFO - Cargados datos locales para VTI (502 filas).
+2026-02-26 00:25:40,928 - INFO - Datos de VTI ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:41,021 - INFO - Cargados datos locales para WFC (502 filas).
+2026-02-26 00:25:41,022 - INFO - Datos de WFC ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:41,095 - INFO - Cargados datos locales para WMT (502 filas).
+2026-02-26 00:25:41,095 - INFO - Datos de WMT ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:41,160 - INFO - Cargados datos locales para XOM (502 filas).
+2026-02-26 00:25:41,160 - INFO - Datos de XOM ya están actualizados o no hay datos para descargar aún (es hoy).
+2026-02-26 00:25:41,221 - INFO - Informe generado exitosamente en ./data/informe_nerv_backtest.md
+2026-02-26 00:25:41,222 - INFO - Reporte de señales generado exitosamente en ./data/senales_nerv_hoy.md
+2026-02-26 00:25:41,222 - INFO - Simulación y reporteo terminados exitosamente.

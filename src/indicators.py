@@ -22,14 +22,6 @@ def apply_indicators(df: pd.DataFrame) -> pd.DataFrame:
         rsi_period = CONFIG.RSI_PARAMS['period']
         df['RSI'] = ta.rsi(df['Close'], length=rsi_period)
 
-        # RSI-MA
-        rsi_ma_period = CONFIG.RSI_PARAMS['ma_period']
-        # Calculamos la media móvil simple del RSI calculado anteriormente
-        if 'RSI' in df.columns and df['RSI'].notna().sum() > rsi_ma_period:
-             df['RSI_MA'] = ta.sma(df['RSI'], length=rsi_ma_period)
-        else:
-             df['RSI_MA'] = None
-
         # SMAs
         df['SMA_10'] = ta.sma(df['Close'], length=CONFIG.SMA_PERIODS['short'])
         df['SMA_50'] = ta.sma(df['Close'], length=CONFIG.SMA_PERIODS['medium'])
