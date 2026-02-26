@@ -24,7 +24,7 @@ RSI_PARAMS = {
     "alcista_compra_1": 35,
     "alcista_compra_2": 30,
     "alcista_compra_step": 3,
-    "alcista_venta": 73,
+    "alcista_venta": 72,
     "alcista_pullback_compra": 50,
     "bajista_compra_cruce": 30,
     "bajista_venta": 70,
