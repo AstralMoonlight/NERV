@@ -181,53 +181,58 @@ def append_signals_to_json(signals: List[Dict], log_path: str):
 
 def main():
     while True:
-        logging.info("--- Iniciando ciclo de escaneo NERV ---")
-        
-        results = []
-        
-        for ticker in CONFIG.TICKERS:
-            df = load_data(ticker, period="3y", interval="1d")
+        try:
+            logging.info("--- Iniciando ciclo de escaneo NERV ---")
             
-            if df.empty:
-                logging.warning(f"Omitiendo {ticker} por falta de datos.")
-                continue
+            results = []
+            
+            for ticker in CONFIG.TICKERS:
+                df = load_data(ticker, period="3y", interval="1d")
                 
-            # 1. Agregar Indicadores (RSI y SMAs)
-            df = apply_indicators(df)
+                if df.empty:
+                    logging.warning(f"Omitiendo {ticker} por falta de datos.")
+                    continue
+                    
+                # 1. Agregar Indicadores (RSI y SMAs)
+                df = apply_indicators(df)
+                
+                # 2. Correr Backtest sobre los históricos
+                try:
+                     resultado_ticker = run_backtest(df, ticker)
+                     if resultado_ticker:
+                          results.append(resultado_ticker)
+                except Exception as e:
+                     logging.error(f"Error procesando backtest para {ticker}: {e}")
             
-            # 2. Correr Backtest sobre los históricos
-            try:
-                 resultado_ticker = run_backtest(df, ticker)
-                 if resultado_ticker:
-                      results.append(resultado_ticker)
-            except Exception as e:
-                 logging.error(f"Error procesando backtest para {ticker}: {e}")
-        
-        if results:
-            # Generar nombres con fecha para el historial
-            today_str = datetime.datetime.now().strftime('%Y-%m-%d')
-            
-            # Informe de Backtest con fecha (Auditoría visual)
-            base_report, ext_report = os.path.splitext(CONFIG.REPORT_PATH)
-            dated_report_path = f"{base_report}_{today_str}{ext_report}"
-            generate_markdown_report(results, dated_report_path)
-            
-            # Informe de Señales con fecha (Acción diaria)
-            base_signal, ext_signal = os.path.splitext(CONFIG.SIGNAL_REPORT_PATH)
-            dated_signal_path = f"{base_signal}_{today_str}{ext_signal}"
-            signals_today = generate_signals_report(results, dated_signal_path)
-            
-            # Log Histórico JSON (Para integración Web)
-            append_signals_to_json(signals_today, CONFIG.SIGNALS_JSON_LOG)
-            
-            logging.info("Simulación y reporteo terminados exitosamente.")
-            logging.info(f"Reportes guardados: {os.path.basename(dated_report_path)} y {os.path.basename(dated_signal_path)}")
-        else:
-            logging.warning("No se generaron resultados de backtest.")
+            if results:
+                # Generar nombres con fecha para el historial
+                today_str = datetime.datetime.now().strftime('%Y-%m-%d')
+                
+                # Informe de Backtest con fecha (Auditoría visual)
+                base_report, ext_report = os.path.splitext(CONFIG.REPORT_PATH)
+                dated_report_path = f"{base_report}_{today_str}{ext_report}"
+                generate_markdown_report(results, dated_report_path)
+                
+                # Informe de Señales con fecha (Acción diaria)
+                base_signal, ext_signal = os.path.splitext(CONFIG.SIGNAL_REPORT_PATH)
+                dated_signal_path = f"{base_signal}_{today_str}{ext_signal}"
+                signals_today = generate_signals_report(results, dated_signal_path)
+                
+                # Log Histórico JSON (Para integración Web)
+                append_signals_to_json(signals_today, CONFIG.SIGNALS_JSON_LOG)
+                
+                logging.info("Simulación y reporteo terminados exitosamente.")
+                logging.info(f"Reportes guardados: {os.path.basename(dated_report_path)} y {os.path.basename(dated_signal_path)}")
+            else:
+                logging.warning("No se generaron resultados de backtest.")
 
-        # EL ESCUDO ANTI-BANEO (Sentinel Mode)
-        logging.info("Modo centinela activado. Próximo escaneo en 1 hora...")
-        time.sleep(3600)
+        except Exception as e:
+            logging.error(f"Error crítico en el ciclo principal: {e}")
+            
+        finally:
+            # EL ESCUDO ANTI-BANEO (Sentinel Mode) - ESTO SIEMPRE SE EJECUTA
+            logging.info("Modo centinela activado. Próximo escaneo en 1 hora...")
+            time.sleep(3600)
 
 if __name__ == "__main__":
     main()
